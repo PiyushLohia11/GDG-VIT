@@ -72,3 +72,10 @@ def run_render():
     draw_l_system(my_turtle, final_string, angle, step_size)
 
     screen.update() 
+
+root = tk.Tk()
+root.title("L-System Fractal Architect")
+root.geometry("900x700")
+
+frame_inputs = tk.Frame(root, bg="#f0f0f0", pady=10)
+frame_inputs.pack(side=tk.TOP, fill=tk.X)
