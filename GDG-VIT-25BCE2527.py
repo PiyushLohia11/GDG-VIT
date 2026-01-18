@@ -97,3 +97,9 @@ btn_generate.grid(row=1, column=4, padx=20)
 
 canvas = tk.Canvas(root, width=800, height=600, bg="white")
 canvas.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
+
+t_screen = turtle.TurtleScreen(canvas) 
+t_screen.bgcolor("white")
+my_turtle = turtle.RawTurtle(t_screen)
+
+root.mainloop()
