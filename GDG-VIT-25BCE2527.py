@@ -54,8 +54,7 @@ def run_render():
         rules[key.strip()] = value.strip()
 
     final_string = expand_string(axiom, rules, iters)
-    print(f"Generated String Length: {len(final_string)}")
-
+    
     screen = t_screen 
     screen.tracer(0, 0) 
     my_turtle.reset()
@@ -64,11 +63,11 @@ def run_render():
     my_turtle.pensize(1)
 
     my_turtle.penup()
-    my_turtle.goto(0, -200)
-    my_turtle.setheading(90) # Face Up
+    my_turtle.goto(-50, -200)
+    my_turtle.setheading(90)
     my_turtle.pendown()
 
-    step_size = 200 / (iters * 2) if iters > 0 else 50
+    step_size = 300 / (3 ** iters)
     draw_l_system(my_turtle, final_string, angle, step_size)
 
     screen.update() 
