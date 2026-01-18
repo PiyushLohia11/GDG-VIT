@@ -79,3 +79,15 @@ root.geometry("900x700")
 
 frame_inputs = tk.Frame(root, bg="#f0f0f0", pady=10)
 frame_inputs.pack(side=tk.TOP, fill=tk.X)
+
+def create_input(parent, label_text, default_val, col):
+    tk.Label(parent, text=label_text, bg="#f0f0f0").grid(row=0, column=col, padx=5)
+    entry = tk.Entry(parent, width=15)
+    entry.insert(0, default_val)
+    entry.grid(row=1, column=col, padx=5)
+    return entry
+
+entry_axiom = create_input(frame_inputs, "Axiom (Start)", "F", 0)
+entry_rule = create_input(frame_inputs, "Rule (Symbol:New)", "F:F[+F]F[-F]F", 1)
+entry_angle = create_input(frame_inputs, "Angle", "25.7", 2)
+entry_iter = create_input(frame_inputs, "Iterations", "4", 3)
