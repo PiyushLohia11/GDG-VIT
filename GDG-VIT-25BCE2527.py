@@ -37,3 +37,38 @@ def draw_l_system(t, instructions, angle, distance):
                 t.pendown()
                 t.pencolor(colors[color_index % len(colors)])
                 color_index += 1
+
+def run_render():
+    axiom = entry_axiom.get()
+    rule_str = entry_rule.get() # Format: F:F+F-F
+    try:
+        angle = float(entry_angle.get())
+        iters = int(entry_iter.get())
+    except ValueError:
+        print("Please enter valid numbers for Angle and Iterations")
+        return
+
+    rules = {}
+    if ":" in rule_str:
+        key, value = rule_str.split(":")
+        rules[key.strip()] = value.strip()
+
+    final_string = expand_string(axiom, rules, iters)
+    print(f"Generated String Length: {len(final_string)}")
+
+    screen = t_screen 
+    screen.tracer(0, 0) 
+    my_turtle.reset()
+    my_turtle.hideturtle()
+    my_turtle.speed(0)
+    my_turtle.pensize(1)
+
+    my_turtle.penup()
+    my_turtle.goto(0, -200)
+    my_turtle.setheading(90) # Face Up
+    my_turtle.pendown()
+
+    step_size = 200 / (iters * 2) if iters > 0 else 50
+    draw_l_system(my_turtle, final_string, angle, step_size)
+
+    screen.update() 
