@@ -91,3 +91,9 @@ entry_axiom = create_input(frame_inputs, "Axiom (Start)", "F", 0)
 entry_rule = create_input(frame_inputs, "Rule (Symbol:New)", "F:F[+F]F[-F]F", 1)
 entry_angle = create_input(frame_inputs, "Angle", "25.7", 2)
 entry_iter = create_input(frame_inputs, "Iterations", "4", 3)
+
+btn_generate = tk.Button(frame_inputs, text="Generate Fractal", command=run_render, bg="#4CAF50", fg="white")
+btn_generate.grid(row=1, column=4, padx=20)
+
+canvas = tk.Canvas(root, width=800, height=600, bg="white")
+canvas.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True)
