@@ -1,7 +1,7 @@
 # L-System Fractal Architect
 
 ### Project Overview
-This application renders complex L-System fractals using Python. To meet the core constraints, it uses a **Single-Library Tech Stack** (Tkinter + Turtle) without external game engines.
+This application renders complex L-System fractals using Python.The program uses a **Single-Library Tech Stack** (Tkinter + Turtle) without external game engines.
 
 ### Key Technical Approaches
 
