@@ -1,6 +1,4 @@
 # L-System Fractal Architect
-**Name:** Piyush Lohia
-**Reg No:** 25BCE2527
 
 ### Project Overview
 This application renders complex L-System fractals using Python. To meet the core constraints, it uses a **Single-Library Tech Stack** (Tkinter + Turtle) without external game engines.
